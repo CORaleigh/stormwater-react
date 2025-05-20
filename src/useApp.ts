@@ -16,6 +16,7 @@ const useApp = () => {
   const searchParams = new URLSearchParams(window.location.search);
   const env = searchParams.get("env") || "prod";
   const isTest = env === "test";
+  debugger
   const [user, setUser] = useState<__esri.PortalUser | nullish>();
   const [imperviousSurfaces, setImperviousSurfaces] = useState<
     __esri.Graphic[]

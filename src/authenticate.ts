@@ -10,10 +10,12 @@ const info = new OAuthInfo({
 export const authenticate = async (
   isTest: boolean
 ): Promise<__esri.PortalUser | nullish> => {
+  console.log('is test', isTest)
   if (isTest) {
     info.appId = "u8kxa1iiA6kg2Nhc";
     info.portalUrl = "https://mapstest.raleighnc.gov/portal";
   }
+  console.log(info);
   config.portalUrl = info.portalUrl;
 
   esriId.registerOAuthInfos([info]);
