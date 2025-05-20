@@ -1,7 +1,7 @@
 import config from "@arcgis/core/config";
 import OAuthInfo from "@arcgis/core/identity/OAuthInfo";
 import esriId from "@arcgis/core/identity/IdentityManager";
-import Portal from "@arcgis/core/Portal/Portal";
+import Portal from "@arcgis/core/portal/Portal"
 const info = new OAuthInfo({
   appId: "xWoMZTo6ZiZVTwcT",
   portalUrl: "https://maps.raleighnc.gov/portal",
