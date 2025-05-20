@@ -37,10 +37,10 @@ interface Props {
 const Apportionments: React.FC<Props> = ({
   account,
   apportionments,
-  apportionmentsTable,
+  //apportionmentsTable,
   accountsTable,
   arcgisMap,
-  parcelLayer,
+ // parcelLayer,
 }) => {
 
   const {
