@@ -26,12 +26,8 @@ const checkSignIn = async (): Promise<__esri.PortalUser | nullish> => {
   await esriId.checkSignInStatus(info.portalUrl + "/sharing");
   const portal = new Portal({
     authMode: "immediate",
+    url: info.portalUrl
   });
-  // Check if using a portal other than ArcGIS Online.
-  if (info.portalUrl !== "https://www.arcgis.com") {
-    portal.url = info.portalUrl;
-  }
-
   const creds = await esriId.getCredential(portal.url);
   const result = await portal.queryUsers({ query: creds.userId });
   if (result.results.length) {
