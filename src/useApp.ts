@@ -113,8 +113,9 @@ const useApp = () => {
         );
         setLogs(logResults ? logResults : []);
         const billing = await getBilling(account.getAttribute("PremiseId"));
-        console.log(billing);
-        setBill(billing);
+        if (billing) {
+          setBill(billing);
+        }
         setLoading(false);
       };
       getRelatedRecords();
